@@ -1,14 +1,14 @@
 # Column Filters
 
-- [Schema](#schema)
+- [Schema](#scheme)
 - [Supported Types](#supported-types)
 	- [text](#text)
 	- [select](#select)
 	- [date](#date)
 	- [range](#range)
 
-<a name="schema"></a>
-## Schema		
+<a name="scheme"></a>
+## Scheme		
 
 Use this code to define column filter with `{type}` type:
 
