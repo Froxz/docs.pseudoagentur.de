@@ -12,13 +12,13 @@ You can specify model title and columns for table view. Form elements will be gr
 ## Arguments	
 
 | Name       	  | Required   	 | Default  	 | Description													 																|
-| --------------- |:------------:|:-------------:| ----------------------------------------------------------------------------------------------------------------------------:|
+| --------------- | ------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | modelClass      | Yes 		 | None	 		 | Provide full model class name with namespace. You can write it in quotes with backslash or without quotes with forward slash.|
 
 ## Options	
 
 | Name       | Required   	 | Default  	 | Description													 										|
-| ---------- |:-------------:|:-------------:| ----------------------------------------------------------------------------------------------------:|
+| ---------- | ------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
 | title      | No 			 | None	 		 | Set title for your model	 																			|
 | columns	 | No 			 | None			 | Comma-separated list of all columns in table view. Type of columns will be guessed from your model. 	|
 
