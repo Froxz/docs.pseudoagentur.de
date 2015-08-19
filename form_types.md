@@ -1,9 +1,9 @@
 # Form Types
 
-- Default Form
-- Horizontal Form
-- Tabbed Form
-- Panel Form
+- [Default Form](#default-form)
+- [Horizontal Form](#horizontal-form)
+- [Tabbed Form](#tabbed-form)
+- [Panel Form](#panel-form)
 
 <a name="default-form"></a>
 ## Default Form
@@ -23,7 +23,7 @@ To create an simple form with vertical fields you have to add the following to y
 ## Horizontal Form
 
 If you want to use a horizontal form, you have to add the `$form->horizontal(true)` to your form (default is `false`).
-You can now change the width from the labels and the fields with `$form->label_size('col-xs-6 col-sm-4 col-md-3 col-lg-2')` and `$form->field_size('col-xs-6 col-sm-8 col-md-9 col-lg-10')`.
+Now you are able to change the width from the labels and the fields with `$form->label_size('col-xs-6 col-sm-4 col-md-3 col-lg-2')` and `$form->field_size('col-xs-6 col-sm-8 col-md-9 col-lg-10')`.
 This both options are optional. Default for `label_size` is `col-sm-2`. Default for `field_size` is `col-sm-10`.
 
 Horizontal Form can also be used in [Tabbed Forms](#tabbed-form) and [Panel Forms](#panel-form).
