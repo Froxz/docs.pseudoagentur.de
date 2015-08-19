@@ -7,45 +7,45 @@
 	- [date](#date)
 	- [range](#range)
 
-<a name="schema">
+<a name="schema"></a>
 ## Schema		
 
 Use this code to define column filter with `{type}` type:
 
 	ColumnFilter::{type}()
 
-<a name="supported-types">
+<a name="supported-types"></a>
 ## Supported Types
 
-<a name="text">
+<a name="text"></a>
 ### Text	
 
 Column wil be filtered by text input value.
 
 	ColumnFilter::text()	
 
-<a name="text-placeholder">
+<a name="text-placeholder"></a>
 #### Placeholder
 
 You can add placeholder to the input field:
 
 	ColumnFilter::text()->placeholder('Title')
 
-<a name="select">
+<a name="select"></a>
 ### Select	
 
 Column will be filtered by value from select input.
 
 	ColumnFilter::select()
 
-<a name="select-placeholder">
+<a name="select-placeholder"></a>
 #### Placeholder
 
 You can add placeholder to the select field:
 
 	ColumnFilter::select()->placeholder('Country')
 
-<a name="select-providing-data">
+<a name="select-providing-data"></a>
 #### Providing Data	
 
 With array:
@@ -60,35 +60,35 @@ With model:
 
 	->model('App\MyModel')->display('title')
 
-<a name="date">
+<a name="date"></a>
 ### Date	
 
 Column wil be filtered by timestamp.
 
 	ColumnFilter::date()
 
-<a name="date-placeholder">
+<a name="date-placeholder"></a>
 #### Placeholder
 
 You can add placeholder to the input field:
 
 	ColumnFilter::date()->placeholder('Title')
 
-<a name="date-format">
+<a name="date-format"></a>
 #### Format	
 
 You can provide timestamp format:
 
 	ColumnFilter::date()->format('d.m.Y')
 
-<a name="range">
+<a name="range"></a>
 ### Range		
 
 Column wil be filtered from one value to another.
 
 	ColumnFilter::range()
 
-<a name="date-range">
+<a name="date-range"></a>
 #### Date Range
 
 You can filter by date range:
@@ -99,7 +99,7 @@ You can filter by date range:
 	    ColumnFilter::date()->format('d.m.Y')->placeholder('To Date')
 	)
 
-<a name="number-range">
+<a name="number-range"></a>
 #### Number Range
 
 You can filter by number range:
