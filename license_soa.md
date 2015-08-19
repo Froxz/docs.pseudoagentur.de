@@ -1,3 +1,5 @@
+# SleepingOwl Admin License
+
 The MIT License (MIT)
 
 Copyright 2014 SleepingOwl <owl.sleeping@yahoo.com>

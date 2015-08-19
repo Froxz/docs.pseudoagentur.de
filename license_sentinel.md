@@ -1,3 +1,5 @@
+# Cartalyst Sentinel License
+
 The BSD 3-Clause License
 Copyright (c) 2011-2015, Cartalyst LLC
 All rights reserved.
