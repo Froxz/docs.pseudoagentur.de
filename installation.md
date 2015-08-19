@@ -30,14 +30,14 @@ To use the SleepingOwl Admin Package with Cartalyst Sentinel Integration you nee
 #### Development Branch
 If you want to use the Development Branch, you have to add the following to the `require` list in your `composer.json`
 
-    "pseudoagentur/soa-admin-sentinel" : "dev-develop"
+    "pseudoagentur/soa-sentinel" : "dev-develop"
 
 <a name="master-branch"></a>
 #### Master Branch
 
 If you want to use the Master Branch, you have to add the following to the `require` list in your `composer.json`
 
-    "pseudoagentur/soa-admin-sentinel" : "dev-master"    
+    "pseudoagentur/soa-sentinel" : "dev-master"    
 
 <a name="composer"></a>
 ### Composer
