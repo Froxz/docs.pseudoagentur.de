@@ -43,7 +43,9 @@
 		<ul>
 			@include('partials.main-nav')
 		</ul>
-		<p class="less-significant"><a href="http://jackmcdade.com">Design by Jack McDade</a></p>
+		<p class="less-significant"><a href="http://http://sleeping-owl.github.io/v3/en/" target="_blank">Documentation Content by http://sleeping-owl.github.io/v3/en//a></p>
+		<p class="less-significant"><a href="http://laravel.com" target="_blank">Documentation App by Laravel.com</a></p>
+		<p class="less-significant"><a href="http://jackmcdade.com" target="_blank">Design by Jack McDade</a></p>
 	</footer>
 
 	
