@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Mit Liebe und Leidenschaft gestaltet. › pseudoagentur</title>
+	<title>{{ isset($title) ? $title . ' - ' : null }}Mit Liebe und Leidenschaft gestaltet. › pseudoagentur</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="Pseudoagentur">
 	<meta name="description" content="Mit Liebe und Leidenschaft gestaltet.">
