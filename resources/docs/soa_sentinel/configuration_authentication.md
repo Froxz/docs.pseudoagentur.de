@@ -6,11 +6,10 @@ With the implementation of Sentinel, the `administrators` database table is obso
 All users can be found in the database table `users`. 
 All user roles can be found in the database table `roles`.
 
-Both tables are in a One-To-Many Relation ( 1 User to N Roles ).
+Both tables are in a `belongs-To-Many` Relation ( 1 User to N Roles ).
 
 ## Default Credentials
 After installation you can use the following credentials to login:
-
 	- E-Mail: admin@soa.backend
 	- Password: password
 
@@ -23,7 +22,6 @@ This package will check the permission for the current user inside the Middlewar
 Permission Check uses `Sentinel::hasAnyAccess()`.
 
 Currently, the definition is the following:
-
 	- If the route is `admin.dashboard` it will check for the permissions `superadmin` and `controlpanel`.
 	- Model has no custom permissions
 		- If the route is `{adminModel}` (Model Index Page) then check for the permissions `superadmin` and `admin.{adminModel}.*`
