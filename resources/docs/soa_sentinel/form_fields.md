@@ -232,11 +232,19 @@ Creates select input.
 
 With array:
 
-	->options([1 => 'First', 2 => 'Second', 3 => 'Third])
+	->options([1 => 'First', 2 => 'Second', 3 => 'Third'])
+
+With Array but without sorting:
+
+	->options([3 => 'Third', 1 => 'First', 2 => 'Second'], false)	
 
 With enum (use array values as keys):
 
-	->enum(['First', 'Second', 'Third])
+	->enum(['First', 'Second', 'Third'])
+
+With enum (use array values as keys):
+
+	->enum(['Third', 'Second', 'First'], false)
 
 With model:
 
