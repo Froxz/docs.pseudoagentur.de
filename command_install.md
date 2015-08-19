@@ -9,7 +9,7 @@ Use this command to run initial configuration of SleepingOwl Admin. It creates a
 ## Options	
 
 | Name       | Required   	 | Default  	 | Description													 |
-| ---------- |:-------------:|:-------------:| -------------------------------------------------------------:|
+| ---------- | ------------- | ------------- | ------------------------------------------------------------- |
 | title      | No 			 | SOA Backend	 | With this parameter you can change the Title of the Backend	 |
 
 
