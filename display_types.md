@@ -1,12 +1,11 @@
 # Display Types
 
-Currently the following types are available:
-	- [Table](#table)
-	- [Datatables](#datatables)
-	- [Datatables async](#datatables-async)
-	- [Tree](#tree)
-	- [Tabbed](#tabs)
-	- [Custom](#custom)
+- [Table](#table)
+- [Datatables](#datatables)
+- [Datatables async](#datatables-async)
+- [Tree](#tree)
+- [Tabbed](#tabs)
+- [Custom](#custom)
 
 <a name="table"></a>
 ## Table

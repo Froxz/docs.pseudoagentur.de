@@ -1,20 +1,20 @@
 #Columns
-    - General
-        - [Schema](#schema)
-        - [Column Header](#column-header)
-        - [Register Custom Column](#register-custom-column)
-        - [Restrict Column Sort](#restrict-column-sort)
-        - [Column Appendants](#column-appendants)
-    - Supported Types
-        - [string](#string)
-        - [lists](#lists)
-        - [count](#count)
-        - [image](#image)
-        - [datetime](#datetime)
-        - [order](#order)
-        - [action](#action)
-        - [checkbox](#checkbox)
-        - [custom](#custom)
+- General
+    - [Schema](#schema)
+    - [Column Header](#column-header)
+    - [Register Custom Column](#register-custom-column)
+    - [Restrict Column Sort](#restrict-column-sort)
+    - [Column Appendants](#column-appendants)
+- Supported Types
+    - [string](#string)
+    - [lists](#lists)
+    - [count](#count)
+    - [image](#image)
+    - [datetime](#datetime)
+    - [order](#order)
+    - [action](#action)
+    - [checkbox](#checkbox)
+    - [custom](#custom)
 
 
 <a name="general"></a>

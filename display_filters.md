@@ -1,9 +1,10 @@
 # Filters
-	- Filter Overview
-	- Filter by related model
-	- Filter by field
-	- Filter with scope
-	- Custom filter
+
+- Filter Overview
+- Filter by related model
+- Filter by field
+- Filter with scope
+- Custom filter
 
 ## Filter Overview
 
