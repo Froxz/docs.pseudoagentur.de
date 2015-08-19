@@ -1,0 +1,27 @@
+- Setup
+    - [Installation](/{{version}}/installation)
+- Commands
+    - [Install](/{{version}}/command_install)
+    - [Model](/{{version}}/command_model)
+- Configuration
+    - [Menu](/{{version}}/configuration_menu)
+    - [Model](/{{version}}/configuration_model)
+    - [Routes](/{{version}}/configuration_routes)
+    - [Authentication](/{{version}}/configuration_authentication)
+    - [Localization](/{{version}}/configuration_localization)
+    - [Validation](/{{version}}/configuration_validation)
+- Display
+    - [Types](/{{version}}/display_types)
+    - [Filters](/{{version}}/display_filters)
+    - [Columns](/{{version}}/display_columns)
+    - [Column Filters](/{{version}}/display_column_filters)
+- Form
+    - [Types](/{{version}}/form_types)
+    - [Fields](/{{version}}/form_fields)
+- External Link
+    - <a href="http://sleeping-owl.github.io" target="_blank">SleepingOwl Admin</a> 
+    - <a href="https://cartalyst.com/manual/sentinel" target="_blank">Cartalyst Sentinel</a>
+    - <a href="https://github.com/Pseudoagentur/soa-sentinel" target="_blank">Github Project</a>
+- Licenses
+    - [SleepingOwl Admin](/{{version}}/license_soa)
+    - [Cartalyst Sentinel](/{{version}}/license_sentinel)
