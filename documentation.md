@@ -4,6 +4,7 @@
     - [Install](/{{version}}/command_install)
     - [Model](/{{version}}/command_model)
 - Configuration
+    - [General](/{{version}}/configuration_general)
     - [Menu](/{{version}}/configuration_menu)
     - [Model](/{{version}}/configuration_model)
     - [Routes](/{{version}}/configuration_routes)
