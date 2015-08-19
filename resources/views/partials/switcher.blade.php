@@ -7,7 +7,7 @@
 		<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
 			@foreach ($versions as $key => $display)
 				<li role="presentation">
-					<a role="menuitem" tabindex="-1" href="{{ url($key.$currentSection) }}">{{ $display }}</a>
+					<a role="menuitem" tabindex="-1" href="{{ url($key) }}">{{ $display }}</a>
 				</li>
 			@endforeach
 		</ul>
