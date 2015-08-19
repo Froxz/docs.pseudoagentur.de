@@ -3,8 +3,13 @@
 SleepingOwl Admin uses locale from your `app.php` locale configuration.
 
 ## Supported Locales
+
+Currently the packages supports the following languages:
 	- en
 	- ru
+	- es
+	- uk
+	- pt_BR
 
 ## Your Own Locales
 
