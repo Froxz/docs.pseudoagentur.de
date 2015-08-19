@@ -35,7 +35,7 @@ Default: `images/uploads`
 
 Template class to use.
 
-Default: `'SleepingOwl\Admin\Templates\TemplateDefault`
+Default: `SleepingOwl\Admin\Templates\TemplateDefault`
 
 *Important:* This package uses the AdminLTE Template instead of SB-Admin2 as default package. 
 
