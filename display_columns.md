@@ -1,6 +1,6 @@
 #Columns
 - General
-    - [Schema](#schema)
+    - [Scheme](#scheme)
     - [Column Header](#column-header)
     - [Register Custom Column](#register-custom-column)
     - [Restrict Column Sort](#restrict-column-sort)
@@ -20,8 +20,8 @@
 <a name="general"></a>
 ## General
 
-<a name="schema"></a>
-### Schema
+<a name="scheme"></a>
+### Scheme
 
 Use this code to define column with `{type}` type:
 
