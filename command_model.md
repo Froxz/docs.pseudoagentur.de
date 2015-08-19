@@ -30,17 +30,17 @@ Eager relations, column types, filters and form elements will be guessed from pr
 
 ## Column Type Guesser
 
-	- count – if model has relation `has-many` on this field.
-	- lists – if model has relation `belongs-to-many` on this field (you must provide field to display in list, e.g. `entries.title`, where `entries` is you eager relation).
-	- date – if this column has `date`, `time` or `timestamp` type in database.
-	- string – in other cases.
+- count – if model has relation `has-many` on this field.
+- lists – if model has relation `belongs-to-many` on this field (you must provide field to display in list, e.g. `entries.title`, where `entries` is you eager relation).
+- date – if this column has `date`, `time` or `timestamp` type in database.
+- string – in other cases.
 
 ## Form Element Guesser
 
-	- select – if model has `belongs-to` relation on this field or this field is enum.
-	- text – if field type in database is `varchar`, `int` or `float`.
-	- ckeditor – if field type in database is `text`.
-	- checkbox – if field type in database is `boolean` (`tinyint(1)`).
-	- date – if field type in database is `date`.
-	- time – if field type in database is `time`.
-	- timestamp – if field type in database is `timestamp`.
+- select – if model has `belongs-to` relation on this field or this field is enum.
+- text – if field type in database is `varchar`, `int` or `float`.
+- ckeditor – if field type in database is `text`.
+- checkbox – if field type in database is `boolean` (`tinyint(1)`).
+- date – if field type in database is `date`.
+- time – if field type in database is `time`.
+- timestamp – if field type in database is `timestamp`.
