@@ -6,6 +6,7 @@
         - [Master Branch](#master-branch)
     - [Composer](#composer)
     - [File Modifications](#file-modifications)
+    - [Composer Dump](#dump)
 
 <a name="installation"></a>
 ## Installation
@@ -45,6 +46,14 @@ After the successful composer update, you have to open the `config/app.php`.
 
 Add the following at the end of the `providers` array (add it before the SleepingOwl Provider):
 
-    Pseudoagentur\AdminBridge\Providers\AdminBridgeServiceProvider',
+    'Pseudoagentur\AdminBridge\Providers\AdminBridgeServiceProvider',
     'SleepingOwl\Admin\AdminServiceProvider',
 
+<a name="dump"></a>
+### Composer Dump
+
+To get no errors after the installation, you should also run
+
+	composer dump-autoload
+
+Without this command, it's possible that you get unexpected errors.	
