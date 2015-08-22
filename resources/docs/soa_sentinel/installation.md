@@ -73,6 +73,7 @@ Add the following at the end of the `aliases` array:
     'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',
     'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',
 
+
 <a name="install-command"></a>
 ### Run install command
     
@@ -96,4 +97,4 @@ Now you can login into the Admin Panel with the following credentials:
 
 - <a href="https://github.com/laravel" target="_blank">Laravel Team</a> - For this awesome PHP framework
 - <a href="https://github.com/sleeping-owl" target="_blank">SleepingOwl</a> - For this awesome Admin Package
-- <a href="https://github.com/virtualstep" target="_blank">VirtualStep</a> - For supporting me with new implementations and give me new ideas
+- <a href="https://github.com/bihlmaierh" target="_blank">Heiko Bihlmaier</a> - For supporting me with new implementations and give me new ideas
