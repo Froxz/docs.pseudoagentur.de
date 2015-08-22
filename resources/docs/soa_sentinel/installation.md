@@ -9,6 +9,8 @@
     - [File Modifications](#file-modifications)
     - [Run install command](#install-command)
     - [Login](#login)
+- [Credits](#credits)
+
 
 <a name="installation"></a>
 ## Installation
@@ -87,3 +89,11 @@ Now you can login into the Admin Panel with the following credentials:
 - URL: `<your-site-url>/admin/`
 - E-Mail: `admin@soa.backend`
 - Password: `password`
+
+
+<a name="credits"></a>
+## Credits
+
+- <a href="https://github.com/laravel" target="_blank">Laravel Team</a> - For this awesome PHP framework
+- <a href="https://github.com/sleeping-owl" target="_blank">SleepingOwl</a> - For this awesome Admin Package
+- <a href="https://github.com/virtualstep" target="_blank">VirtualStep</a> - For supporting me with new implementations and give me new ideas
