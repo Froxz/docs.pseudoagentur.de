@@ -58,7 +58,7 @@ You can register your own form elements in `bootstrap.php` file within `bootstra
 
 Your class must extend `SleepingOwl\Admin\FormItems\BaseFormItem` (if you dont want to get value from your instance by name) or `SleepingOwl\Admin\FormItems\NamedFormItem` (in opposite case).
 
-<a name="custom-field-assets"></a>
+<a name="custom-field-view"></a>
 #### Adding Custom Scripts and Styles
 
 You can add custom scripts and styles to the page header, that uses your custom form element.
