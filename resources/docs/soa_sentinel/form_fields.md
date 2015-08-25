@@ -71,6 +71,13 @@ You can add custom scripts and styles to the page header, that uses your custom 
 	    AssetManager::addStyle(asset('my.css'));
 	}
 
+#### Adding Custom view
+You can use one of the existing field views or you can create your own.
+
+Existing views can be found at `/vendor/pseudoagentur/seo-sentinel/src/views/formitem`
+
+If you want to use your own, the view must be stored in `/Resources/views/vendor/admin-lte/default/formitem/`.
+
 <a name="custom-field-example"></a>
 #### Example
 
