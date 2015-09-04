@@ -57,6 +57,8 @@ Add the following at the end of the `providers` array:
 
     'Cartalyst\Sentinel\Laravel\SentinelServiceProvider',
     'SleepingOwl\Admin\AdminServiceProvider',
+    'Barryvdh\Elfinder\ElfinderServiceProvider'
+
 
 Add the following at the end of the `aliases` array:    
     
