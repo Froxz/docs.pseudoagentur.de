@@ -1,5 +1,6 @@
 - Setup
     - [Installation](/{{version}}/installation)
+    - [Upgrade](/{{version}}/upgrade)
 - Commands
     - [Install](/{{version}}/command_install)
     - [Model](/{{version}}/command_model)
