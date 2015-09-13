@@ -27,16 +27,6 @@ Provide columns to show in table. For details see [columns](/{{version}}/display
 	    ...
 	]);
 
-<a name="table-column-filters"></a>
-### Column Filters
-
-Provide column filters to use. For details see [column filters](/{{version}}/display_column_filters).
-
-	$display->columnFilters([
-	    null, // first column has no column filter
-	    ColumnFilter::text()->placeholder('Title'), // second column has text column filter
-	])
-
 <a name="table-eager-loading"></a>
 ### Eager Loading
 
@@ -119,6 +109,17 @@ You can specify default order for your table in datatables format (column index 
 You can use multiple order fields:
 
 	$display->order([[0, 'desc'], [2, 'asc']]);
+
+<a name="datatables-column-filters"></a>
+### Column Filters
+
+Provide column filters to use. For details see [column filters](/{{version}}/display_column_filters).
+
+	$display->columnFilters([
+	    null, // first column has no column filter
+	    ColumnFilter::text()->placeholder('Title'), // second column has text column filter
+	])
+
 
 <a name="datatables-attributes"></a>
 ### Datatables Attributes	
