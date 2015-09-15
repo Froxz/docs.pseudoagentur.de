@@ -43,12 +43,13 @@ class DocsController extends Controller {
 		return $this->show($version, $page, $directory);
 	}
 
-	public function show($version, $directory = null, $page = null)
+	public function show($version, $page = null, $directory = null)
 	{
 
 		if ( ! $this->isVersion($version)) {
 			return redirect(DEFAULT_VERSION.'/'.$version, 301);
 		}
+
 
 		if( is_null($page) ) {
 			$page 		= DEFAULT_PAGE;

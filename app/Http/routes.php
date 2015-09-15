@@ -26,4 +26,5 @@ function markdown($text) {
 }
 
 get('/', 'DocsController@showRootPage');
-get('{version}/{directory?}/{page?}', 'DocsController@show');
+get('{version}/{page?}', 'DocsController@show');
+get('{version}/{directory}/{page}', 'DocsController@showDir');

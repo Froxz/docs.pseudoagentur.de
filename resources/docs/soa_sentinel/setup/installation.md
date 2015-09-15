@@ -39,7 +39,7 @@ If you want to use the Development Branch, you have to add the following to the 
 
 If you want to use the Master Branch, you have to add the following to the `require` list in your `composer.json`
 
-    "pseudoagentur/soa-sentinel" : "dev-master"    
+    "pseudoagentur/soa-sentinel" : "3.0.1"    
 
 <a name="composer"></a>
 ### Composer
@@ -57,7 +57,8 @@ Add the following at the end of the `providers` array:
 
     'Cartalyst\Sentinel\Laravel\SentinelServiceProvider',
     'SleepingOwl\Admin\AdminServiceProvider',
-    'Barryvdh\Elfinder\ElfinderServiceProvider'
+    'Barryvdh\Elfinder\ElfinderServiceProvider',
+    'Proengsoft\JsValidation\JsValidationServiceProvider',
 
 
 Add the following at the end of the `aliases` array:    
@@ -74,6 +75,8 @@ Add the following at the end of the `aliases` array:
     'AdminForm'     => 'SleepingOwl\Admin\Form\AdminForm',
     'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',
     'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',
+
+    'JsValidator'   => 'Proengsoft\JsValidation\Facades\JsValidatorFacade',
 
 
 <a name="install-command"></a>
@@ -92,11 +95,3 @@ Now you can login into the Admin Panel with the following credentials:
 - URL: `<your-site-url>/admin/`
 - E-Mail: `admin@soa.backend`
 - Password: `password`
-
-
-<a name="credits"></a>
-## Credits
-
-- <a href="https://github.com/laravel" target="_blank">Laravel Team</a> - For this awesome PHP framework
-- <a href="https://github.com/sleeping-owl" target="_blank">SleepingOwl</a> - For this awesome Admin Package
-- <a href="https://github.com/bihlmaierh" target="_blank">Heiko Bihlmaier</a> - For supporting me with new implementations and give me new ideas
