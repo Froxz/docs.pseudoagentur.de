@@ -30,7 +30,7 @@ Please run the following commands to update them.
 
 The first command will update all assets.
 
-If you have changed something in the admin views, please check them.
+If you have changed something in the admin views or assets, please check them.
 Otherwise use the package views and merge them with your modifications.
 
 If you're running soa-sentinel without changing anything, you can also run
@@ -39,14 +39,39 @@ If you're running soa-sentinel without changing anything, you can also run
 
 But this will overwrite also the config files. Please backup your changes!!!!	
 
+To get the latest resources from the elFinder package (or to initialize it after `composer update`) you have to run the following commands:
+
+	php artisan elfinder:publish
+	php artisan vendor:publish --provider="Barryvdh\Elfinder\ElfinderServiceProvider"
 
 #### config/app.php 
 
-Please ensure that the `providers` array includes this providers:
+Please ensure that 
+
+- the `providers` array includes this providers:
 
     'Cartalyst\Sentinel\Laravel\SentinelServiceProvider',
     'SleepingOwl\Admin\AdminServiceProvider',
-    'Barryvdh\Elfinder\ElfinderServiceProvider'
+    'Barryvdh\Elfinder\ElfinderServiceProvider',
+    'Proengsoft\JsValidation\JsValidationServiceProvider',
+
+- the 'aliases' array includes this aliases:
+
+    'Activation'    => 'Cartalyst\Sentinel\Laravel\Facades\Activation',
+    'Reminder'      => 'Cartalyst\Sentinel\Laravel\Facades\Reminder',
+    'Sentinel'      => 'Cartalyst\Sentinel\Laravel\Facades\Sentinel',
+
+    'Admin'         => 'SleepingOwl\Admin\Admin',
+    'Column'        => 'SleepingOwl\Admin\Columns\Column',
+    'ColumnFilter'  => 'SleepingOwl\Admin\ColumnFilters\ColumnFilter',
+    'Filter'        => 'SleepingOwl\Admin\Filter\Filter',
+    'AdminDisplay'  => 'SleepingOwl\Admin\Display\AdminDisplay',
+    'AdminForm'     => 'SleepingOwl\Admin\Form\AdminForm',
+    'AdminTemplate' => 'SleepingOwl\Admin\Templates\Facade\AdminTemplate',
+    'FormItem'      => 'SleepingOwl\Admin\FormItems\FormItem',
+
+    'JsValidator'   => 'Proengsoft\JsValidation\Facades\JsValidatorFacade',
+
 
 #### config/admin.php
 
@@ -84,6 +109,4 @@ Please ensure that the parameter looks like:
 
 #### config/admintheme.php 
 
-This is a new config file, which allows you to change the skin and layout options for AdminLTE.
-
-	
+This is a new config file, which allows you to change the skin and layout options for AdminLTE.	

@@ -83,7 +83,7 @@ Add the following at the end of the `aliases` array:
 ### Run install command
     
 Last but not least we have to run the install command, which will create all tables and files for us.
-Detailed information about the install command can be found in the [install command documentation](/{{version}}/command_install).
+Detailed information about the install command can be found in the [install command documentation](/{{version}}/command/install).
 
     php artisan admin:install
 
