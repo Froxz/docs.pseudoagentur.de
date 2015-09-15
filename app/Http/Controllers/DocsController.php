@@ -30,7 +30,7 @@ class DocsController extends Controller {
 	 */
 	public function showRootPage()
 	{
-		return redirect(DEFAULT_VERSION);
+		return redirect(DEFAULT_VERSION."/".DEFAULT_PAGE_DIR."/".DEFAULT_PAGE);
 	}
 
 	/**
@@ -38,23 +38,35 @@ class DocsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function show($version, $page = null)
+
+	public function showDir($version, $directory = null, $page = null ) {
+		return $this->show($version, $page, $directory);
+	}
+
+	public function show($version, $directory = null, $page = null)
 	{
+
 		if ( ! $this->isVersion($version)) {
 			return redirect(DEFAULT_VERSION.'/'.$version, 301);
 		}
 
-		$content = $this->docs->get($version, $page ?: 'installation');
+		if( is_null($page) ) {
+			$page 		= DEFAULT_PAGE;
+			$directory 	= DEFAULT_PAGE_DIR;
+		}		
+
+		$content = $this->docs->get($version, $page, $directory);
 		
 		if (is_null($content)) {
 			abort(404);
 		}
 
 		$title = (new Crawler($content))->filterXPath('//h1');
-
+		
 		$section = '';
 
-		if ($this->docs->sectionExists($version, $page)) {
+		if ($this->docs->sectionExists($version, $page, $directory)) {
+			$page = ( !is_null($directory) ) ? $directory."/".$page : $page;
 			$section .= '/'.$page;
 		} elseif ( ! is_null($page)) {
 			return redirect('/'.$version);

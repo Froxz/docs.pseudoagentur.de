@@ -1,6 +1,6 @@
 # Model Command
 
-Use this command to create new model configuration. For details see [model configuration](/{{version}}/configuration_model).
+Use this command to create new model configuration. For details see [model configuration](/{{version}}/configuration/model).
 
 You can specify model title and columns for table view. Form elements will be grabbed from your model table structure.
 

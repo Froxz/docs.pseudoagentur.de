@@ -1,8 +1,8 @@
-# SleepingOwl Admin License
+# SOA Sentinel License
 
 The MIT License (MIT)
 
-Copyright 2014 SleepingOwl <owl.sleeping@yahoo.com>
+Copyright 2015 Pseudoagentur <hello@pseudoagentur.de>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

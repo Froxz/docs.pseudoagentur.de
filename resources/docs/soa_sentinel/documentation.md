@@ -1,28 +1,64 @@
-- Setup
-    - [Installation](/{{version}}/installation)
+- Setup 
+    - [Installation](/{{version}}/setup/installation)
+    - [Upgrade](/{{version}}/setup/upgrade)
 - Commands
-    - [Install](/{{version}}/command_install)
-    - [Model](/{{version}}/command_model)
+    - [Install](/{{version}}/command/install)
+    - [Model](/{{version}}/command/model)
 - Configuration
-    - [General](/{{version}}/configuration_general)
-    - [Menu](/{{version}}/configuration_menu)
-    - [Model](/{{version}}/configuration_model)
-    - [Routes](/{{version}}/configuration_routes)
-    - [Authentication](/{{version}}/configuration_authentication)
-    - [Localization](/{{version}}/configuration_localization)
-    - [Validation](/{{version}}/configuration_validation)
+    - [General](/{{version}}/configuration/general)
+    - [Menu](/{{version}}/configuration/menu)
+    - [Model](/{{version}}/configuration/model)
+    - [Routes](/{{version}}/configuration/routes)
+    - [Localization](/{{version}}/configuration/localization)
+    - [Authentication](/{{version}}/configuration/authentication)
+- Validation
+    - [General](/{{version}}/validation/general)
+    - [Ajax Validation](/{{version}}/validation/ajax)
+- Translations
+    - [General](/{{version}}/translation/general)
 - Display
-    - [Types](/{{version}}/display_types)
-    - [Filters](/{{version}}/display_filters)
-    - [Columns](/{{version}}/display_columns)
-    - [Column Filters](/{{version}}/display_column_filters)
+    - [General](/{{version}}/display/general)
+    - [Types](/{{version}}/display/types)
+    - [Filters](/{{version}}/display/filters)
+    - [Columns](/{{version}}/display/columns)
+    - [Column Filters](/{{version}}/display/column_filters)
 - Form
-    - [Types](/{{version}}/form_types)
-    - [Fields](/{{version}}/form_fields)
+    - [General](/{{version}}/form/general)
+    - [Types](/{{version}}/form/types)
+- Form Items  
+    - [General](/{{version}}/field/general)
+    - [Text](/{{version}}/field/text)
+    - [TextAddon](/{{version}}/field/textaddon)
+    - [Password](/{{version}}/field/password)
+    - [Select](/{{version}}/field/select)
+    - [Select2](/{{version}}/field/select2)
+    - [MultiSelect](/{{version}}/field/multiselect)
+    - [Choosen](/{{version}}/field/choosen)
+    - [BootstrapSelect](/{{version}}/field/bootstrapselect)
+    - [Date](/{{version}}/field/date)
+    - [Time](/{{version}}/field/time)
+    - [Timestamp](/{{version}}/field/timestamp)
+    - [Textarea](/{{version}}/field/textarea)
+    - [CKEditor](/{{version}}/field/ckeditor)
+    - [TinyMCE](/{{version}}/field/tinymce)
+    - [Image](/{{version}}/field/image)
+    - [Images](/{{version}}/field/images)
+    - [Columns](/{{version}}/field/columns)
+    - [Custom](/{{version}}/field/custom)
+    - [View](/{{version}}/field/view)
+- Extend
+    - [Register new Display Type](/{{version}}/extend/displaytype)
+    - [Register new Form Type](/{{version}}/extend/formtype)
+    - [Register new Form Item](/{{version}}/extend/formitem)
+    - [Register new Column](/{{version}}/extend/column)
+    - [Register new Column Filter](/{{version}}/extend/columnfilter)
+    - [Register new Filter](/{{version}}/extend/filter)
 - External Link
     - <a href="http://sleeping-owl.github.io" target="_blank">SleepingOwl Admin</a> 
     - <a href="https://cartalyst.com/manual/sentinel" target="_blank">Cartalyst Sentinel</a>
+    - <a href="https://github.com/proengsoft/laravel-jsvalidation" target="_blank">Proengsoft Ajax Validation</a>
+    - <a href="https://github.com/dimsav/laravel-translatable" target="_blank">Dimsav Translatable</a>
+    - <a href="https://github.com/barryvdh/laravel-elfinder" target="_blank">Barryvdh elFinder</a>
     - <a href="https://github.com/Pseudoagentur/soa-sentinel" target="_blank">Github Project</a>
-- Licenses
-    - [SleepingOwl Admin](/{{version}}/license_soa)
-    - [Cartalyst Sentinel](/{{version}}/license_sentinel)
+- [Credits](/{{version}}/credits)
+- [License](/{{version}}/license)

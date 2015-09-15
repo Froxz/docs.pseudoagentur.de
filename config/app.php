@@ -13,7 +13,7 @@ return [
 	|
 	*/
 
-	'debug' => env('APP_DEBUG'),
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -140,11 +140,16 @@ return [
 		/*
 		 * Application Service Providers...
 		 */
+
+		Barryvdh\Debugbar\ServiceProvider::class,
+
 		'App\Providers\AppServiceProvider',
 		'App\Providers\BusServiceProvider',
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
+
+		
 
 	],
 
@@ -193,6 +198,8 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+		'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
 	],
 
