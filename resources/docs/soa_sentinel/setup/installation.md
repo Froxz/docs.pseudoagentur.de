@@ -1,55 +1,32 @@
 # Installation
 
-- [Installation](#installation)
-    - [Requirements](#requirements)
-    - [Choose Branch](#choose-branch)
-        - [Development Branch](#master-branch)
-        - [Master Branch](#master-branch)
-    - [Composer](#composer)
-    - [File Modifications](#file-modifications)
-    - [Run install command](#install-command)
-    - [Login](#login)
-- [Credits](#credits)
+- [Requirements](#requirements)
+- [Composer](#composer)
+- [File Modifications](#file-modifications)
+- [Run install command](#install-command)
+- [Login](#login)
 
-
-<a name="installation"></a>
-## Installation
-
-### Requirements
+<a name="requirements"></a>
+## Requirements
 
 To use the SleepingOwl Admin Package with Cartalyst Sentinel Integration you need the following:
 
-<div class="content-list" markdown="1">
 - Composer
 - Installed and configured Laravel 5.1.* Environment
-</div>
-
-
-<a name="choose-branch"></a>
-### Choose Branch
-
-<a name="development-branch"></a>
-#### Development Branch
-If you want to use the Development Branch, you have to add the following to the `require` list in your `composer.json`
-
-    "pseudoagentur/soa-sentinel" : "dev-develop"
-
-<a name="master-branch"></a>
-#### Master Branch
-
-If you want to use the Master Branch, you have to add the following to the `require` list in your `composer.json`
-
-    "pseudoagentur/soa-sentinel" : "3.0.1"    
 
 <a name="composer"></a>
-### Composer
+## Composer
+
+Add the following line to the `require` part in your `composer.json`:
+
+    "pseudoagentur/soa-sentinel" : "3.0.1"
 
 Now you have to run `composer update` to get the required packages.
 
 *The Sentinel Package is included in the package composer.json, so you don't need to add them to the global composer.json file.*
 
 <a name="file-modifications"></a>
-### File Modifications
+## File Modifications
 
 After the successful composer update, you have to open the `config/app.php`.
 
@@ -80,7 +57,7 @@ Add the following at the end of the `aliases` array:
 
 
 <a name="install-command"></a>
-### Run install command
+## Run install command
     
 Last but not least we have to run the install command, which will create all tables and files for us.
 Detailed information about the install command can be found in the [install command documentation](/{{version}}/command/install).
@@ -88,7 +65,7 @@ Detailed information about the install command can be found in the [install comm
     php artisan admin:install
 
 <a name="login"></a>
-### Login
+## Login
 Now you're done - Good job!
 
 Now you can login into the Admin Panel with the following credentials:

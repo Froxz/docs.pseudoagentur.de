@@ -6,6 +6,7 @@
     - [Model](/{{version}}/command/model)
 - Configuration
     - [General](/{{version}}/configuration/general)
+    - [AdminLTE](/{{version}}/configuration/adminlte)
     - [Menu](/{{version}}/configuration/menu)
     - [Model](/{{version}}/configuration/model)
     - [Routes](/{{version}}/configuration/routes)
