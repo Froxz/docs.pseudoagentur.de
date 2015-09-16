@@ -1,4 +1,4 @@
-# AdminLTE THeme Configuration
+# AdminLTE Theme Configuration
 
 The Config file `config/admintheme.php` has the following structure (removed the comments to keep it as short as possible):
 
