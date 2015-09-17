@@ -24,7 +24,6 @@
     - [Columns](/{{version}}/display/columns)
     - [Column Filters](/{{version}}/display/column_filters)
 - Form
-    - [General](/{{version}}/form/general)
     - [Types](/{{version}}/form/types)
 - Form Items  
     - [General](/{{version}}/field/general)
