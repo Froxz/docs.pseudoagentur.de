@@ -1,6 +1,19 @@
 # Model Configuration
 
-SleepingOwl Admin model configurations must be stored within bootstrapDirectory (default: app/admin).
+- [Provide Model](#provide_model)
+- [Set Title](#set_title)
+- [Set Alias](#set_alias)
+- [Set Display](#set_display)
+- [Permissions](#permissions)
+- [Create & Edit](#create_edit)
+- [Disable Creation](#disable_create)
+- [Disable Edit](#disable_edit)
+- [Disable Delete](#display_delete)
+- [Disable Restore](#disable_restore)
+- [Example](#example)
+
+
+SleepingOwl Admin model configurations must be stored within `bootstrapDirectory` (default: app/admin).
 
 You can store all your model configurations in one file or split it as you want.
 
@@ -21,7 +34,7 @@ Here is example how your model configuration might look like:
 	        Column::lists('companies.title')->label('Companies'),
 	    ]);
 	    return $display;
-	})->createAndEdit(function ()
+	})->create(function ()
 	{
 	    $form = AdminForm::form();
 	    $form->items([
@@ -43,8 +56,34 @@ Here is example how your model configuration might look like:
 	        ]),
 	    ]);
 	    return $form;
-	})->delete(null);
+	})->edit(function ($id)
+	{
+	    $form = AdminForm::form();
+	    $form->items([
+	        FormItem::columns()->columns([
+	            [
+	                FormItem::text('firstName', 'First Name')->required(),
+	                FormItem::text('lastName', 'Last Name')->required(),
+	                FormItem::text('phone', 'Phone'),
+	                FormItem::text('address', 'Address'),
+	            ],
+	            [
+	                FormItem::image('photo', 'Photo'),
+	                FormItem::date('birthday', 'Birthday')->format('d.m.Y'),
+	            ],
+	            [
+	                FormItem::select('country_id', 'Country')->model('App\Country')->display('title'),
+	                FormItem::textarea('comment', 'Comment'),
+	            ],
+	        ]),
+	    ]);
+	    return $form;
+	})->delete(function ($id)
+	{
+		return true;
+	});
 
+<a name="provide_model"></a>
 ## Provide Model
 
 For PHP5.5+ you can use the following command:
@@ -55,16 +94,19 @@ If you are running PHP under 5.5 you can use the following command:
 
 	Admin::model('App\MyModel')
 
+<a name="set_title"></a>
 ## Set Title
 
 	Admin::model(\App\MyModel::class)->title('My Model Title')
 
+<a name="set_alias"></a>
 ## Set Alias
 
 	Admin::model(\App\MyModel::class)->alias('districts')			
 
 If no alias is defined, it will use the Model name as alias.
 
+<a name="set_display"></a>
 ## Set Display
 
 The display function will be use to configure the Overview Page for your model.
@@ -74,6 +116,7 @@ The display function will be use to configure the Overview Page for your model.
 	    // specify model display here
 	})
 
+<a name="permissions"></a>
 ## Set custom permissions
 
 With the implementation of Cartalyst Sentinel, you're now able to define custom
@@ -85,7 +128,7 @@ Multiple Permissions can be added with a comma as separator
 
 	Admin::model(\App\MyModel::class)->permission('permission1,permission2,permission3')
 	
-
+<a name="create_edit"></a>
 ## Set Create and Edit Forms
 
 You can provide one form for creation and edition.	
@@ -101,41 +144,90 @@ Or use separate forms.
 	{
 	    // create form
 	})
-	->edit(function ()
+	->edit(function ($id)
 	{
 	    // edit form
 	})
 
+<a name="disable_create"></a>
 ## Disable Creation
 
-	Admin::model(\App\MyModel::class)->createAndEdit(function ($id)
-	{
-	    if (is_null($id))
-	    {
-	        return null;
-	    }
-	    ...
-	})	
+	Admin::model(\App\MyModel::class)->create(null))	
 
-## Disable Edition
+<a name="disable_edit"></a>
+## Disable Edit
 
-	Admin::model(\App\MyModel::class)->createAndEdit(function ($id)
-	{
-	    if ( ! is_null($id))
-	    {
-	        return null;
-	    }
-	    ...
-	})	
+	Admin::model(\App\MyModel::class)->edit(null)	
 
+<a name="disable_delete"></a>
 ## Disable Delete
 
 You can disable delete function:	
 
 	Admin::model(\App\MyModel::class)->delete(null)
 
+<a name="disable_restore"></a>
 ## Disable Restore
 
 You can disable restore function (in models with soft deletes):	
 
 	Admin::model(\App\MyModel::class)->restore(null)
+
+<a name="example"></a>
+## Example
+
+In this example we will explain how to disable an action based on a condition.
+
+In our example we have two users with the following permissions
+
+- News Writer
+	- admin.news.write 	= true
+	- admin.news.edit 	= false
+	- admin.news.delete = false 
+- News Manager	
+	- admin.news.write 	= true
+	- admin.news.edit 	= true
+	- admin.news.delete = true 
+
+As you can see, the user `News Writer` can only create new news articles.
+The `News Manager` can edit/delete all records.
+
+Our Admin will now looks like: 
+
+	<?php
+
+	Admin::model('App\Entities\News')->title('News')->alias('news')->display(function ()
+	{
+		$display = AdminDisplay::table();
+		$display->columns([
+			Column::string('id')->label('#'),
+			Column::string('title')->label('Title'),
+			Column::datetime('date')->label('Date')->format('d.m.Y'),
+			Column::custom()->label('Published')->callback(function ($instance)
+			{
+				return $instance->published ? '&check;' : '-';
+			}),
+		]);
+		return $display;
+	})->createAndEdit(function ($id)
+	{
+		if ( !is_null($id) && !\Sentinel::hasAccess('admin.news.edit'))
+		{
+			return null;
+		}
+		$form = AdminForm::form();
+		$form->items([
+			FormItem::text('title', 'Title')->required(),
+			FormItem::date('date', 'Date')->required()->format('d.m.Y'),
+			FormItem::checkbox('published', 'Published'),
+			FormItem::ckeditor('text', 'Text'),
+		]);
+		return $form;
+	})->delete(function ($id)
+	{
+		if (!\Sentinel::hasAccess('admin.news.delete'))
+		{
+			return null;
+		}
+		return true;
+	});	
