@@ -1,10 +1,15 @@
 # Installation
 
+<!-- MarkdownTOC -->
+
 - [Requirements](#requirements)
 - [Composer](#composer)
 - [File Modifications](#file-modifications)
-- [Run install command](#install-command)
+- [Run install command](#run-install-command)
 - [Login](#login)
+
+<!-- /MarkdownTOC -->
+
 
 <a name="requirements"></a>
 ## Requirements
@@ -56,7 +61,7 @@ Add the following at the end of the `aliases` array:
     'JsValidator'   => 'Proengsoft\JsValidation\Facades\JsValidatorFacade',
 
 
-<a name="install-command"></a>
+<a name="run-install-command"></a>
 ## Run install command
     
 Last but not least we have to run the install command, which will create all tables and files for us.

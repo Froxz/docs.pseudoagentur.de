@@ -1,11 +1,22 @@
 # Install Command
 
+<!-- MarkdownTOC -->
+
+- [Usage](#usage)
+- [Options](#options)
+- [What will it do for you](#what-will-it-do-for-you)
+
+<!-- /MarkdownTOC -->
+
+
 Use this command to run initial configuration of SleepingOwl Admin. It creates all necessary files and directories.
 
+<a name="usage"></a>
 ## Usage
 
 	php artisan admin:install --title="My Admin Title" --path="customfilesdirectory_in_public"
 
+<a name="options"></a>
 ## Options	
 
 | Name       | Required   	 | Default  	 | Description													 							 |
@@ -14,6 +25,7 @@ Use this command to run initial configuration of SleepingOwl Admin. It creates a
 | path       | No 			 | files/	 	 | Path for filemanager directory relative to public directory. Please set no / at the end!	 |
 
 
+<a name="what-will-it-do-for-you"></a>
 ## What will it do for you
 
 - Set Admin Title (optional)

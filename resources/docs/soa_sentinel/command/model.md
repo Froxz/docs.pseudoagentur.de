@@ -1,20 +1,35 @@
 # Model Command
 
+<!-- MarkdownTOC -->
+
+- [Usage](#usage)
+- [Arguments](#arguments)
+- [Options](#options)
+- [What will it do for you](#what-will-it-do-for-you)
+- [Column Type Guesser](#column-type-guesser)
+- [Form Element Guesser](#form-element-guesser)
+
+<!-- /MarkdownTOC -->
+
+
 Use this command to create new model configuration. For details see [model configuration](/{{version}}/configuration/model).
 
 You can specify model title and columns for table view. Form elements will be grabbed from your model table structure.
 
+<a name="usage"></a>
 ## Usage
 
 	php artisan admin:model "\Foo\MyModel" --title="My Model Title" --columns="title, image, date, entries"
 	php artisan admin:model Foo/MyModel --columns="title,image,date,entries"
 
+<a name="arguments"></a>
 ## Arguments	
 
 | Name       	  | Required   	 | Default  	 | Description													 																|
 | --------------- | ------------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | modelClass      | Yes 		 | None	 		 | Provide full model class name with namespace. You can write it in quotes with backslash or without quotes with forward slash.|
 
+<a name="options"></a>
 ## Options	
 
 | Name       | Required   	 | Default  	 | Description													 										|
@@ -23,11 +38,13 @@ You can specify model title and columns for table view. Form elements will be gr
 | columns	 | No 			 | None			 | Comma-separated list of all columns in table view. Type of columns will be guessed from your model. 	|
 
 
+<a name="what-will-it-do-for-you"></a>
 ## What will it do for you
 
 This command creates new file with model configuration within `bootstrapDirectory`, called `{modelClass}.php`. 
 Eager relations, column types, filters and form elements will be guessed from provided data, your model class and database structure.
 
+<a name="column-type-guesser"></a>
 ## Column Type Guesser
 
 - count – if model has relation `has-many` on this field.
@@ -35,6 +52,7 @@ Eager relations, column types, filters and form elements will be guessed from pr
 - date – if this column has `date`, `time` or `timestamp` type in database.
 - string – in other cases.
 
+<a name="form-element-guesser"></a>
 ## Form Element Guesser
 
 - select – if model has `belongs-to` relation on this field or this field is enum.

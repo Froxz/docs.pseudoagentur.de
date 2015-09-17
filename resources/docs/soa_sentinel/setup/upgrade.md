@@ -1,10 +1,14 @@
 # Upgrade
 
-- [to 3.0.1](#3_0_1)
-- [to 3.0.2](#3_0_2)
-- [to 3.0.3](#3_0_3)
+<!-- MarkdownTOC -->
 
-<a name="3_0_1"></a>
+- [Upgrade from 3.0.0 to 3.0.1](#upgrade-from-300-to-301)
+
+<!-- /MarkdownTOC -->
+
+
+
+<a name="upgrade-from-300-to-301"></a>
 ## Upgrade from 3.0.0 to 3.0.1
 
 ### What's new in 3.0.1

@@ -1,16 +1,20 @@
 # Model Configuration
 
-- [Provide Model](#provide_model)
-- [Set Title](#set_title)
-- [Set Alias](#set_alias)
-- [Set Display](#set_display)
-- [Permissions](#permissions)
-- [Create & Edit](#create_edit)
-- [Disable Creation](#disable_create)
-- [Disable Edit](#disable_edit)
-- [Disable Delete](#display_delete)
-- [Disable Restore](#disable_restore)
+<!-- MarkdownTOC -->
+
+- [Provide Model](#provide-model)
+- [Set Title](#set-title)
+- [Set Alias](#set-alias)
+- [Set Display](#set-display)
+- [Set custom permissions](#set-custom-permissions)
+- [Set Create and Edit Forms](#set-create-and-edit-forms)
+- [Disable Creation](#disable-creation)
+- [Disable Edit](#disable-edit)
+- [Disable Delete](#disable-delete)
+- [Disable Restore](#disable-restore)
 - [Example](#example)
+
+<!-- /MarkdownTOC -->
 
 
 SleepingOwl Admin model configurations must be stored within `bootstrapDirectory` (default: app/admin).
@@ -83,7 +87,7 @@ Here is example how your model configuration might look like:
 		return true;
 	});
 
-<a name="provide_model"></a>
+<a name="provide-model"></a>
 ## Provide Model
 
 For PHP5.5+ you can use the following command:
@@ -94,19 +98,19 @@ If you are running PHP under 5.5 you can use the following command:
 
 	Admin::model('App\MyModel')
 
-<a name="set_title"></a>
+<a name="set-title"></a>
 ## Set Title
 
 	Admin::model(\App\MyModel::class)->title('My Model Title')
 
-<a name="set_alias"></a>
+<a name="set-alias"></a>
 ## Set Alias
 
 	Admin::model(\App\MyModel::class)->alias('districts')			
 
 If no alias is defined, it will use the Model name as alias.
 
-<a name="set_display"></a>
+<a name="set-display"></a>
 ## Set Display
 
 The display function will be use to configure the Overview Page for your model.
@@ -116,7 +120,7 @@ The display function will be use to configure the Overview Page for your model.
 	    // specify model display here
 	})
 
-<a name="permissions"></a>
+<a name="set-custom-permissions"></a>
 ## Set custom permissions
 
 With the implementation of Cartalyst Sentinel, you're now able to define custom
@@ -128,7 +132,7 @@ Multiple Permissions can be added with a comma as separator
 
 	Admin::model(\App\MyModel::class)->permission('permission1,permission2,permission3')
 	
-<a name="create_edit"></a>
+<a name="set-create-and-edit-forms"></a>
 ## Set Create and Edit Forms
 
 You can provide one form for creation and edition.	
@@ -149,24 +153,24 @@ Or use separate forms.
 	    // edit form
 	})
 
-<a name="disable_create"></a>
+<a name="disable-creation"></a>
 ## Disable Creation
 
 	Admin::model(\App\MyModel::class)->create(null))	
 
-<a name="disable_edit"></a>
+<a name="disable-edit"></a>
 ## Disable Edit
 
 	Admin::model(\App\MyModel::class)->edit(null)	
 
-<a name="disable_delete"></a>
+<a name="disable-delete"></a>
 ## Disable Delete
 
 You can disable delete function:	
 
 	Admin::model(\App\MyModel::class)->delete(null)
 
-<a name="disable_restore"></a>
+<a name="disable-restore"></a>
 ## Disable Restore
 
 You can disable restore function (in models with soft deletes):	
