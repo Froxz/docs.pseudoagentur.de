@@ -56,11 +56,16 @@ class Documentation {
 	 *
 	 * @param  string  $version
 	 * @param  string  $page
+	 * @param  string  $directory
 	 * @return string
 	 */
-	public function get($version, $page)
+	public function get($version, $page, $directory=null)
 	{
-		return $this->cache->remember('docs.'.$version.'.'.$page, 5, function() use ($version, $page) {
+		$page_cache = ( !is_null($directory) ) ? $directory.".".$page : $page;
+
+		$page = ( !is_null($directory) ) ? $directory."/".$page : $page;
+		
+		return $this->cache->remember('docs.'.$version.'.'.$page_cache, 5, function() use ($version, $page) {
 			$path = base_path('resources/docs/'.$version.'/'.$page.'.md');
 
 			if ($this->files->exists($path)) {
@@ -88,10 +93,13 @@ class Documentation {
 	 *
 	 * @param  string  $version
 	 * @param  string  $page
+	 * @param  string  $directory
 	 * @return boolean
 	 */
-	public function sectionExists($version, $page)
+	public function sectionExists($version, $page, $directory=null )
 	{
+		$page = ( !is_null($directory) ) ? $directory."/".$page : $page;
+		
 		return $this->files->exists(
 			base_path('resources/docs/'.$version.'/'.$page.'.md')
 		);

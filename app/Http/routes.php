@@ -15,6 +15,8 @@
  * Set the default documentation version...
  */
 define('DEFAULT_VERSION', 'soa_sentinel');
+define('DEFAULT_PAGE', 'installation');
+define('DEFAULT_PAGE_DIR', 'setup');
 
 /**
  * Convert some text to Markdown...
@@ -25,3 +27,4 @@ function markdown($text) {
 
 get('/', 'DocsController@showRootPage');
 get('{version}/{page?}', 'DocsController@show');
+get('{version}/{directory}/{page}', 'DocsController@showDir');

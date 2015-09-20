@@ -61,7 +61,7 @@ svg#logoTop {
 }
 
 .docs article {
-	padding: 25px 125px 50px 50px;
+	padding: 25px 50px 50px 50px;
 	margin-left: 300px;
 
 	ul {
@@ -420,7 +420,14 @@ svg#logoTop {
 
 }
 
-@media (max-width:780px) {
+@media (max-width:600px) {
+
+	.hidden-xs {
+		display:none;
+	}
+}
+
+@media (max-width:900px) {
 
 	.docs article {
 		margin-left: 0px;
