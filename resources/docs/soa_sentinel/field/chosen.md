@@ -1,6 +1,6 @@
-# Multiselect
+# Chosen
 
-Creates multiselect input with <a href="https://harvesthq.github.io/chosen/" target="_blank">Chosen</a>.
+Creates select input with <a href="https://harvesthq.github.io/chosen/" target="_blank">Chosen</a>.
 
 	FormItem::chosen('category_id', 'Category')
 
