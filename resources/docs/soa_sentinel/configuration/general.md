@@ -19,6 +19,11 @@ The Config file `config/admin.php` has the following structure (removed the comm
 
 		'filemanagerDirectory' =>  'files/',
 
+		'elfinderPopupUrl' => [
+			"type" 	=> "url",
+			"path"	=> "elfinder/popup" 
+		],
+
 		'auth'                    => [
 			'model' => '\SleepingOwl\AdminAuth\Entities\Administrator',
 			'rules' => [
@@ -57,6 +62,7 @@ Here you will find a explaination for each attribute:
 | bootstrapDirectory  						| Defines the path to the directory where the admin model definition will be stored  		|
 | imagesUploadDirectory  					| Deprecated. Please use `filemanagerDirectory` instead.  									|
 | filemanagerDirectory  					| Defines the upload path for the `image` and `images` field.   							|
+| elfinderPopupUrl							| Defines the url / route to the elfinder file select for filemanager field                 |
 | auth.model  								| Deprecated since we're using Cartalyst Sentinel  											|
 | auth.rules.email   						| Defines the validation rule for the email login field 									|
 | auth.rules.password  						| Defines the validation rule for the email login field 									|
